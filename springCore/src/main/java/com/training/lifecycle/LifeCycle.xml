@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:annotation-config/>
+
+ <bean class="com.training.lifecycle.Pepsi" name="pep" >
+	<property name="price" value="15" />
+	</bean>
+
+	<bean class="com.training.lifecycle.Samosa" name="sam"
+		init-method="init" destroy-method="destroy">
+		<property name="price" value="12" />
+	</bean> 
+	
+	<bean class="com.training.lifecycle.Example" name="example" >
+	 <property name="subject" value="English" />
+	</bean> 
+	
+	
+
+</beans>

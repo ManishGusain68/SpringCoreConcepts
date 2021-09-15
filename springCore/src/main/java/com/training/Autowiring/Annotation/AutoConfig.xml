@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+
+	<!-- this is our beans -->
+	<bean class="com.training.Autowiring.Annotation.Address" name="address">
+		<property name="street" value="Kalibari" />
+		<property name="city" value="Delhi" />
+	</bean>
+	
+	<bean class="com.training.Autowiring.Annotation.Address" name="address1">
+		<property name="street" value="konark" />
+		<property name="city" value="Bangalore" />
+	</bean>
+
+
+
+	<bean class="com.training.Autowiring.Annotation.Emp" name="emp1" >
+	<property name="name" value="manish" />
+	</bean>
+
+
+
+</beans>
